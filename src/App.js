@@ -1,6 +1,7 @@
 
 import './App.css';
 import Navbar from './components/navigation/navbar';
+import Calendar from './components/calendar/calendar'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
 
           <div className="w-48 h-20 bg-red-900 text-white text-bold rounded-2xl shadow-lg mt-20 items-center">
             <p className="justify-center py-4">Contenido de los componentes</p>
+          </div>
+          <div>
+            <Calendar />
           </div>
         </div>
         
