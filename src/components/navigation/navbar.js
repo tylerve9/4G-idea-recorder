@@ -2,6 +2,8 @@ import React from 'react'
 import logo from '../../logo.svg';
 
 export default function Navbar(){
+ 
+
     return(
         <nav className="flex justify-center items-center">
           <img src={logo} className="App-logo " alt="logo" />
@@ -10,7 +12,10 @@ export default function Navbar(){
             <div class="text-center p-4 m-2"><button className="px-4 py-2 mx-2 bg-blue-500 rounded-lg shadow-md border border-blue-700 text-white text-semibold outline-none">
               Calendario
               </button>
+              
               </div>
+
+              
             <div class="text-center p-4 m-2"><button className="px-4 py-2 mx-2 bg-blue-500 rounded-lg shadow-md border border-blue-700 text-white text-semibold outline-none">
               Ideas
               </button>
