@@ -3,6 +3,23 @@ import './App.css';
 import Navbar from './components/navigation/navbar';
 
 function App() {
+
+
+  const ideasList = []
+
+//componentDidMount() {
+
+  useEffect(() => {
+    loadData()
+  }, []);
+  
+//}
+
+function loadData(){
+  localStorage.setItem("ideasList", JSON.stringify(ideasList))
+
+}
+
   return (
     <div className="App">
       <header className="h-20 w-full bg-purple-900 rounded-b-xl shadow-xl">
