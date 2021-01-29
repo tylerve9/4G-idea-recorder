@@ -1,15 +1,24 @@
-
+import React, { useEffect } from 'react'
 import './App.css';
 import Navbar from './components/navigation/navbar';
 import Calendar from './components/calendar/calendar'
 
-function App() {
 
+
+function App() {
 
   const ideasList = []
 
+  const usersList = [{
+      nick: "Miguel",
+      pass: "admin1"
+    },{
+      nick: "Karina",
+      pass: "admin2"
+    }
+  ]
+  
 //componentDidMount() {
-
   useEffect(() => {
     loadData()
   }, []);
@@ -18,6 +27,7 @@ function App() {
 
 function loadData(){
   localStorage.setItem("ideasList", JSON.stringify(ideasList))
+  localStorage.setItem("userList", JSON.stringify(usersList))
 
 }
 

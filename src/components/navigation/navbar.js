@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../logo.svg';
+import Login from '../authentication/login';
 
 export default function Navbar(){
     return(
@@ -23,6 +24,9 @@ export default function Navbar(){
               Pomodoro
               </button>
               </div>
+          </div>
+          <div class="flex">
+            <Login />
           </div>
         </nav>
     )
