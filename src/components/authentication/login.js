@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 export default function Login(){
 
-    const userLogged = ''
+    //const userLogged = ''
 
     const [loggedIn, setLoggedIn] = useState(false)
+    const [userLogged, setUserLogged] = useState({})
     const [name, setName] = useState("")
     const [pass, setPass] = useState("")
 
     function loginPass(user){
         setLoggedIn(true)
         localStorage.setItem("loggedIn",JSON.stringify(loggedIn))
+        setUserLogged(user)
+        localStorage.setItem("userLogged",JSON.stringify(user))
     }
 
     function loginFail(){
@@ -42,13 +45,15 @@ export default function Login(){
         for (const key in userList) {
             if (Object.hasOwnProperty.call(userList, key)) {
                 const element = userList[key];
-                console.log(element);
-                if((name != "" && name != null)){
+                //console.log(element);
+                if((name !== "" && name !== null)){
                     if((element.nick == name)&& (element.pass == pass)){
                         loginPass(element)
                     }else{
                         loginFail()
                     }
+                }else{
+                    loginFail()
                 }
             }
         }
@@ -56,7 +61,7 @@ export default function Login(){
 
     return (
         <div>
-            <div className="flex flexauto">
+            <div className="flex flex-auto">
                 
                 {(!loggedIn)?
                 
@@ -66,7 +71,7 @@ export default function Login(){
                         <button className="px-4 py-2 mx-2 bg-blue-500 rounded-lg shadow-md border border-blue-700 text-white text-semibold outline-none" type="submit">Login</button>
                     </form>
                 :
-                    <span><b>{ name } </b>
+                    <span><b>{ userLogged.nick } </b>
                     <button className="px-4 py-2 mx-2 bg-blue-500 rounded-lg shadow-md border border-blue-700 text-white text-semibold outline-none" type="submit" onClick={logout}>Logout</button>      
                     </span>
                 }      
