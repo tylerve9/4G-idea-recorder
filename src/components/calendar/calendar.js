@@ -46,13 +46,13 @@ export default function Calendar(){
     
     return (
         <div className="my-10">
-          <div className="grid grid-cols-7 gap-20">
+          <div className="grid grid-cols-7 gap-2">
             <div className="">Domingo</div>
             <div className="...">Lunes</div>
             <div className="...">Martes</div>
             <div className="...">Miercoles</div>
             <div className="...">Jueves</div>
-            <div className="...">Vienres</div>
+            <div className="...">Viernes</div>
             <div className="...">Sabado</div>
 
             <div className="..."></div>
@@ -63,7 +63,7 @@ export default function Calendar(){
             
             { finalDays.map((day,i) => {
                 return (
-                    <div>
+                    <div className="m-2 p-0" key={"casilla-"+i}>
                         <Day key={day.day} day={day.day}  today={day.today} />
                     </div>
                 )

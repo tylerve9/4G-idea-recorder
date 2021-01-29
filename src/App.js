@@ -4,10 +4,12 @@ import Navbar from './components/navigation/navbar';
 //import Navbar from './components/navigation/navbar';
 //import Registrosideas from './components/registrosideas'
 import Calendar from './components/calendar/calendar'
+import IdeaList from './components/ideas/Idealist';
 
 function App() {
 
   const ideasList = []
+  const userLogged = {}
 
   const usersList = [{
       nick: "Miguel",
@@ -28,6 +30,7 @@ function App() {
 function loadData(){
   localStorage.setItem("ideasList", JSON.stringify(ideasList))
   localStorage.setItem("userList", JSON.stringify(usersList))
+  localStorage.setItem("userLogged", JSON.stringify(userLogged))
 
 }
 //<Registrosideas /> 
@@ -53,8 +56,13 @@ function loadData(){
           <div>
             <Calendar />
           </div>
+          
+         
         </div>
         
+      </div>
+      <div className="flex">
+            <IdeaList />
       </div>
     </div>
   );
