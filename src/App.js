@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import './App.css';
 import Navbar from './components/navigation/navbar';
-import Calendar from './components/calendar/calendar'
-
-
+import Registrosideas from './components/registrosideas'
+import Calendario from './components/calendario'
 
 function App() {
 
@@ -34,7 +33,9 @@ function loadData(){
   return (
     <div className="App">
       <header className="h-20 w-full bg-purple-900 rounded-b-xl shadow-xl">
-        <Navbar />
+      <Navbar /> 
+      <Registrosideas /> 
+      <Calendario />
         
       </header>
 
