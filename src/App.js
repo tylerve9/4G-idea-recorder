@@ -3,8 +3,9 @@ import './App.css';
 import Navbar from './components/navigation/navbar';
 //import Navbar from './components/navigation/navbar';
 //import Registrosideas from './components/registrosideas'
-import Calendar from './components/calendar/calendar'
-import IdeaList from './components/ideas/Idealist';
+//import Calendar from './components/calendar/calendar'
+//import IdeaList from './components/ideas/Idealist';
+import FreeNoteForm from './components/freenotes/freenoteform';
 
 function App() {
 
@@ -49,12 +50,14 @@ function loadData(){
 
       
       <div className="flex">
-        <div className="w-60  border border-black ">Menu lateral</div>
-        <div className="w-4 flex-auto flex h-screen border border-r-black justify-center">
+        <div className="w-80  border border-black ">Menu lateral
+          <FreeNoteForm />
+        </div>
+        <div className="w-auto flex-auto flex h-screen border border-r-black justify-center">
 
           
           <div>
-            <Calendar />
+            {/* <Calendar /> */}
           </div>
           
          
@@ -62,7 +65,7 @@ function loadData(){
         
       </div>
       <div className="flex">
-            <IdeaList />
+            {/* {<IdeaList />} */}
       </div>
     </div>
   );

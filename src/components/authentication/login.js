@@ -47,7 +47,7 @@ export default function Login(){
                 const element = userList[key];
                 //console.log(element);
                 if((name !== "" && name !== null)){
-                    if((element.nick == name)&& (element.pass == pass)){
+                    if((element.nick === name)&& (element.pass === pass)){
                         loginPass(element)
                     }else{
                         loginFail()

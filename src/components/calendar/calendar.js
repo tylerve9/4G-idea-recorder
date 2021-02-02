@@ -5,21 +5,21 @@ import Day from './day'
 export default function Calendar(){
 
 
-    const year = new Date().getFullYear();
-    const month = new Date().getMonth(); // month: { month } <br />
-    //const day = new Date().getDay(); //=5
-    const miobjeto = new Date().toJSON();
-    const monthJanInit = new Date(2021,1,1);
+    // const year = new Date().getFullYear();
+    // const month = new Date().getMonth(); // month: { month } <br />
+    // //const day = new Date().getDay(); //=5
+    // const miobjeto = new Date().toJSON();
+    //const monthJanInit = new Date(2021,1,1);
     const today = new Date().getDate();
     
 
-    function mostrarFecha(){
-        console.log(year);
-        console.log(miobjeto);
-        console.log(month);
-        //console.log(day);
+    // function mostrarFecha(){
+    //     console.log(year);
+    //     console.log(miobjeto);
+    //     console.log(month);
+    //     //console.log(day);
         
-    }
+    // }
 
     let days = []
     const [finalDays, setFinalDays] = useState([])
