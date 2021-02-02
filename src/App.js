@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
 import './App.css';
 import Navbar from './components/navigation/navbar';
-//import Navbar from './components/navigation/navbar';
 //import Registrosideas from './components/registrosideas'
 //import Calendar from './components/calendar/calendar'
-//import IdeaList from './components/ideas/Idealist';
+import Ideas from './components/ideas/ideas';
 import FreeNoteForm from './components/freenotes/freenoteform';
 
 function App() {
@@ -23,17 +22,18 @@ function App() {
   
 //componentDidMount() {
   useEffect(() => {
+    function loadData(){
+      localStorage.setItem("ideasList", JSON.stringify(ideasList))
+      localStorage.setItem("userList", JSON.stringify(usersList))
+      localStorage.setItem("userLogged", JSON.stringify(userLogged))
+    
+    }
     loadData()
   }, []);
   
 //}
 
-function loadData(){
-  localStorage.setItem("ideasList", JSON.stringify(ideasList))
-  localStorage.setItem("userList", JSON.stringify(usersList))
-  localStorage.setItem("userLogged", JSON.stringify(userLogged))
 
-}
 //<Registrosideas /> 
 //<Calendario />
 //<div className="w-48 h-20 bg-red-900 text-white text-bold rounded-2xl shadow-lg mt-20 items-center">
@@ -57,6 +57,7 @@ function loadData(){
 
           
           <div>
+            {<Ideas />}
             {/* <Calendar /> */}
           </div>
           

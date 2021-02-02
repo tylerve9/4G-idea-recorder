@@ -14,13 +14,15 @@ export default function FreeNoteForm(){
         setNote(event.target.value)
     }
 
-    function saveList() {
-        localStorage.setItem("freenotesList", JSON.stringify(list))
-    }
+    
 
     useEffect(
-        () => { saveList() }
-        , [list]
+        () => { 
+            function saveList() {
+                localStorage.setItem("freenotesList", JSON.stringify(list))
+            }
+            saveList() 
+        }, [list]
     )
 
 
